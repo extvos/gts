@@ -1,2 +1,2 @@
-# gts
-GTS, Another Traffic Server Powered by Go.
+# GTS
+Another Traffic Server Powered by Go.
