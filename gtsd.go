@@ -21,7 +21,7 @@ func main() {
 	flag.BoolVar(&showVersion, "v", false, "Show version.")
 	flag.Parse()
 
-	os.Stderr.Write([]byte(fmt.Sprintf("GTS %v - Another Traffic Server.\n", VERSION)))
+	os.Stderr.Write([]byte(fmt.Sprintf("GTS v%s - Just Another Traffic Server.\n", VERSION)))
 	os.Stderr.Write([]byte("Copyright (C) 2016 Mingcai SHEN.\n"))
 	if showVersion {
 		os.Exit(0)
@@ -40,7 +40,6 @@ func main() {
 	}
 
 	if checkConf {
-
 		fmt.Printf("Configuration(%s) valid!\n", configFile)
 		fmt.Println("Configurations: ")
 		out, err := json.MarshalIndent(g_config, "", " ")
@@ -48,7 +47,6 @@ func main() {
 			fmt.Errorf("Failed!\n")
 		} else {
 			fmt.Println(string(out))
-
 		}
 		os.Exit(0)
 	}
